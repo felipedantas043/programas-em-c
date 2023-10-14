@@ -1,7 +1,9 @@
 #! bin/bash
 
 echo "Instalando..."
+
 sleep 4
+
 sudo apt update
 sudo apt install git
 git clone https://github.com/kelebek333/rtl8188fu
@@ -13,5 +15,7 @@ sudo dkms build rtl8188fu/1.0
 sudo dkms install rtl8188fu/1.0
 sudo cp ./rtl8188fu/firmware/rtl8188fufw.bin /lib/firmware/rtlwifi/
 sleep 4
+
 echo "Rebooting your computer..."
+
 reboot
